@@ -66,6 +66,7 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
@@ -86,12 +87,13 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: none;
 }
 
 button {
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: none;
   font: inherit;
   color: inherit;
 }
