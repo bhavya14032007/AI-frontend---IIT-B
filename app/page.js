@@ -1,15 +1,25 @@
+import Navbar from '../components/Navbar'
+import AnimatedBackground from '../components/AnimatedBackground'
 import Hero from '../components/Hero'
-import FeatureShowcase from '../components/FeatureShowcase'
-import PricingMatrix from '../components/PricingMatrix'
 import SocialProof from '../components/SocialProof'
+import FeatureShowcase from '../components/FeatureShowcase'
+import HowItWorks from '../components/HowItWorks'
+import PricingMatrix from '../components/PricingMatrix'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <SocialProof />
-      <FeatureShowcase />
-      <PricingMatrix />
-    </main>
+    <>
+      <AnimatedBackground />
+      <Navbar />
+      <main id="main-content">
+        <Hero />
+        <SocialProof />
+        <FeatureShowcase />
+        <HowItWorks />
+        <PricingMatrix />
+      </main>
+      <Footer />
+    </>
   )
 }
