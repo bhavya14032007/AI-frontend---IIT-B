@@ -1,0 +1,99 @@
+.featureSection {
+  padding: var(--space-8) 0;
+  background-color: var(--surface-color);
+}
+
+.featureSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-6);
+  text-align: center;
+  color: var(--primary-accent);
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.bentoItem {
+  background-color: var(--arctic-powder);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all var(--transition-reflow);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--transition-micro);
+}
+
+.accordionHeader:hover {
+  background-color: var(--mystic-mint);
+}
+
+.accordionHeader h3 {
+  font-size: 1.25rem;
+  color: var(--oceanic-noir);
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--primary-accent);
+  transition: transform var(--transition-micro);
+}
+
+.accordionContent {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all var(--transition-reflow);
+  padding: 0 var(--space-3);
+}
+
+.active .accordionContent {
+  max-height: 200px;
+  opacity: 1;
+  padding: 0 var(--space-3) var(--space-3) var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .bentoItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .accordionHeader {
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .accordionHeader:hover {
+    background-color: transparent;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .accordionContent {
+    max-height: none;
+    opacity: 1;
+    padding: 0 var(--space-3) var(--space-3) var(--space-3);
+  }
+}

@@ -1,0 +1,89 @@
+:root {
+  /* Color Palette */
+  --arctic-powder: #F1F6F4;
+  --mystic-mint: #D9E8E2;
+  --forsythia: #FFC801;
+  --deep-saffron: #FF9932;
+  --nocturnal-expedition: #114C5A;
+  --oceanic-noir: #172B36;
+
+  /* Theme mapping */
+  --bg-color: var(--arctic-powder);
+  --text-color: var(--oceanic-noir);
+  --primary-accent: var(--nocturnal-expedition);
+  --secondary-accent: var(--forsythia);
+  --border-color: var(--mystic-mint);
+  --surface-color: #FFFFFF;
+
+  /* 8px Spacing Grid */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+  --space-16: 128px;
+  
+  /* Animations */
+  --transition-micro: 150ms ease-out;
+  --transition-reflow: 300ms ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-micro: 0s;
+    --transition-reflow: 0s;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-jetbrains), monospace;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
